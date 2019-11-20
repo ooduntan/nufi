@@ -1,2 +1,2 @@
-export { Teams } from './Teams'
-export { Conferences } from './Conferences'
+export { Teams } from "./Teams";
+export { Conferences } from "./Conferences";

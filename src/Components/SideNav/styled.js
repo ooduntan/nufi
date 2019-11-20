@@ -11,18 +11,18 @@ export const NavContainer = styled.div`
 `;
 
 export const Logo = styled.h1`
-  padding: 30px;
+  padding: 30px 8%;
   border-bottom: 1px solid #6d6d6d;
   margin: 0;
 `;
 
 export const MenuWrapper = styled.div``;
 export const MenuTitle = styled.div`
-  margin: 27px 10px 10px;
+  margin: 27px 10% 10px;
 `;
 
 export const MenuList = styled.div`
-  padding: 10px 20px;
+  padding: 10px 5%;
 `;
 
 export const EachMenu = styled(Link)`

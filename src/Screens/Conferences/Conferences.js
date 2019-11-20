@@ -1,17 +1,15 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
+
 import { Header, ListTable, Content } from "Components";
 
 const titles = ["Abbr", "Name", "Short name"];
-const contentKeys = [
-  "abbreviation",
-  "name",
-  "short_name",
-];
+const contentKeys = ["abbreviation", "name", "short_name"];
 
 export const Conferences = ({ displayedConference, fetchConference }) => {
   useEffect(() => {
-    fetchConference()
-  }, [fetchConference])
+    fetchConference();
+  }, [fetchConference]);
 
   return (
     <Content>
@@ -24,4 +22,15 @@ export const Conferences = ({ displayedConference, fetchConference }) => {
       />
     </Content>
   );
+};
+
+Conferences.propTypes = {
+  displayedConference: PropTypes.arrayOf(
+    PropTypes.shape({
+      abbreviation: PropTypes.string,
+      name: PropTypes.string,
+      short_name: PropTypes.string
+    })
+  ).isRequired,
+  fetchConference: PropTypes.func.isRequired
 };
